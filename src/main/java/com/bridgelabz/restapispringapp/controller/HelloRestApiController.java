@@ -1,9 +1,6 @@
 package com.bridgelabz.restapispringapp.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloRestApiController {
@@ -25,5 +22,12 @@ public class HelloRestApiController {
             @PathVariable String name
     ) {
         return "Hello " + name + " from BridgeLabz";
+    }
+
+    @PostMapping(value = "/postBody")
+    public String userDetails(
+            @RequestBody UserDTO userDTO
+    ) {
+        return userDTO.toString();
     }
 }
