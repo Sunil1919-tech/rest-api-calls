@@ -1,6 +1,7 @@
 package com.bridgelabz.restapispringapp.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +20,10 @@ public class HelloRestApiController {
         return "Hello" + Mark + " " + "from bridgelabz";
     }
 
-
+    @GetMapping(value = "/path{name}")
+    public String sayHello(
+            @PathVariable String name
+    ) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
