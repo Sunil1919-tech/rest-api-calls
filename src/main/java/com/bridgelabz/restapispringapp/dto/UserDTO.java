@@ -1,5 +1,11 @@
-package com.bridgelabz.restapispringapp.controller;
+package com.bridgelabz.restapispringapp.dto;
 
+/**
+ * purpose:to initialize the variables
+ *
+ * @author Sunil
+ * @since 01/12/2021
+ */
 public class UserDTO {
     private String firstName;
     private String lasName;
